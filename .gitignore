@@ -4,3 +4,4 @@ __pycache__
 *.vectorized_content
 .noteablekeep
 .tmp/
+testtest.ipynb
