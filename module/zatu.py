@@ -10,7 +10,7 @@ Extract function:
 2) Extract data by BeautifulSoup:
 	- product_list = the section in the webpage that contains all the product
     - product = extract product data in product_list one by one
-    - 
+    - notice = stock level e.g. out of stock, pre-order, 3+ in stock, last stock, etc
 """
 def extract_data(z_url, z_page):
     full_products = []
@@ -46,6 +46,11 @@ def extract_data(z_url, z_page):
         z_page += 1
     return full_products
 
+"""
+Load to csv function:
+simply put all the record in product_list into a csv
+TO-DO: Put this into a util py as a common function
+"""
 def load2csv (product_list, csv_path, header):
     with open(csv_path, "w") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=header)
