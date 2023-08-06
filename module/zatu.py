@@ -1,9 +1,17 @@
-## zatu
+## This script contains all function to scrape zatu data
 import requests
 from bs4 import BeautifulSoup
 import csv
 from decimal import Decimal
 
+"""
+Extract function:
+1) It will print out the current scraping page number, 10 page in a row
+2) Extract data by BeautifulSoup:
+	- product_list = the section in the webpage that contains all the product
+    - product = extract product data in product_list one by one
+    - 
+"""
 def extract_data(z_url, z_page):
     full_products = []
     while True:
