@@ -51,4 +51,4 @@ def load2csv (product_list, csv_path, header):
         writer = csv.DictWriter(csvfile, fieldnames=header)
         writer.writeheader()
         writer.writerows(product_list)
-    return ('===csv_export===')
+    return ('===csv_exported===')
